@@ -1,0 +1,236 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+    padding: 20px;
+    text-align: center;
+    background-color: rgb(16, 5, 36);
+    ;
+    color: white;
+}
+
+img.main_logo {
+    width: 400px;
+    height: auto;
+}
+
+/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+.navbar {
+    overflow: hidden;
+    background-color: rgb(16, 5, 36);
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+    float: left;
+    display: block;
+    color: orchid;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+    float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+    background-color: orchid;
+    color: rgb(16, 5, 36);
+}
+
+/* Active/current link */
+.navbar a.active {
+    background-color: orchid;
+    color: rgb(16, 5, 36);
+}
+
+.navbar a.active:hover {
+    background-color: rgb(16, 5, 36);
+    color: orchid;
+}
+
+/* Column container */
+.row {
+    display: -ms-flexbox;
+    /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap;
+    /* IE10 */
+    flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+    -ms-flex: 30%;
+    /* IE10 */
+    flex: 30%;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+/* Main column */
+.main {
+    -ms-flex: 70%;
+    /* IE10 */
+    flex: 70%;
+    background-color: white;
+    padding: 20px;
+}
+
+/* Fake image, just for this example */
+.ranking {
+    background-color: rgb(16, 5, 36);
+    width: 100%;
+    padding: 0px 10px;
+    overflow: auto;
+    border-radius: 7px;
+}
+
+.images1 {
+    background-color: rgb(16, 5, 36);
+    padding: 0px 10px;
+    width: 100%;
+    overflow: auto;
+    border-radius: 7px;
+}
+
+.about_logo {
+    width: 190px;
+    height: 190px;
+    align-self: center;
+    float: left;
+    vertical-align: middle;
+}
+
+.about_details {
+    color: orchid;
+    font-size: 15px;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+}
+
+a.top5 {
+    display: inline;
+    padding-left: 10px;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    color: orchid;
+    line-height: 57px;
+}
+
+img.novimg1 {
+    width: 35px;
+    height: 50px;
+    margin-top: 5px;
+    float: left;
+}
+
+img.novimg2 {
+    width: 120px;
+    height: 150px;
+    float: left;
+    margin: 5px 20px;
+}
+
+img.novimg2_1 {
+    width: 120px;
+    height: 150px;
+    float: left;
+    margin: 5px 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+img.novimg2_2 {
+    width: 120px;
+    height: 150px;
+    float: left;
+    margin: 5px 20px;
+    margin-bottom: 65px;
+}
+
+.nov_details {
+    color: orchid;
+    font-size: medium;
+}
+
+.nov_name {
+    color: violet;
+    font-size: 24px;
+    font-weight: bolder;
+}
+
+.nov_name:hover {
+    color: blueviolet;
+    font-size: 24px;
+    font-weight: bolder;
+}
+
+.nov_link {
+    text-decoration: none;
+}
+
+h5 {
+    font-size: 12px;
+    text-align: right;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.ranking::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.ranking {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.images1::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.images1 {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+@media screen and (max-width: 700px) {
+    .row {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .navbar a {
+        float: none;
+        width: 100%;
+    }
+}

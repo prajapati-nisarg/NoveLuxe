@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Read The Complete Sherlock Holmes Online | NoveLuxe</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="noveluxe_css.css">
+    <style>
+        div.images2 {
+            color: orchid;
+            padding: 10px 20px;
+        }
+
+        div.images1>h3 {
+            display: inline;
+            margin-bottom: 10px;
+        }
+
+        .chapter {
+            margin-left: 10px;
+            margin-bottom: 10px;
+            margin-top: 5px;
+            background-color: rgb(16, 5, 36);
+            outline: none;
+            border: 2px;
+            border-radius: 7px;
+            border-color: orchid;
+            border-style: outset;
+            color: orchid;
+            text-align: center;
+        }
+
+        .sub_btn {
+            margin-left: 10px;
+            margin-bottom: 10px;
+            padding: 5px 10px;
+            background-color: rgb(16, 5, 36);
+            border: 2px;
+            border-radius: 7px;
+            border-color: orchid;
+            border-style: outset;
+            color: orchid;
+        }
+
+        .sub_btn2 {
+            margin-left: 10px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            padding: 5px 10px;
+            width: 10%;
+            background-color: rgb(16, 5, 36);
+            border: 2px;
+            border-radius: 7px;
+            border-color: orchid;
+            border-style: outset;
+            color: orchid;
+            float: right;
+        }
+
+        img.novimg2 {
+            margin: 25px 20px;
+            width: 180px;
+            height: 210px;
+            margin-bottom: 70px;
+        }
+
+        .nov_display {
+            width: 100%;
+            height: 1000px;
+            border: 2px;
+            border-radius: 7px;
+            border-color: orchid;
+            border-style: outset;
+            box-shadow: 2px 2px 5px 3px orchid;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <img src="logo2.PNG" alt="Noveluxe" class="main_logo">
+    </div>
+
+    <div class="navbar">
+        <a href="index.html" class="active">Home</a>
+        <a href="Genre_Mainpage.html">Genre</a>
+        <a href="novel_list.html" class="right">Novel List</a>
+    </div>
+
+    <div class="row">
+        <div class="side">
+            <h2>About Website</h2>
+            <h3>NoveLuxe</h3>
+            <div class="images1" style="height:200px;">
+                <img src="logo.PNG" alt="NoveLuxe.logo" class="about_logo">
+                <p class="about_details">NoveLuxe invites readers into a digital sanctuary where literary enthusiasts
+                    can indulge in a vast collection of novels for free. Immerse yourself in captivating stories across
+                    genres, accessible at your fingertips. Explore a world of words on NoveLuxe and let the stories
+                    unfold.</p>
+            </div>
+            <h3>Most Popular</h3>
+            <p>Top 5 most popular novels on the NoveLuxe</p>
+            <div class="ranking" style="height:60px;"><img src="orv.jpg" class="novimg1"><a href="orv_mainpage.html"
+                    class="top5">Omniscient Reader's Viewpoint</a></div><br>
+            <div class="ranking" style="height:60px;"><img src="tbate.jpg" class="novimg1"><a href="tbate_mainpage.html"
+                    class="top5">The Beginning After The End</a></div><br>
+            <div class="ranking" style="height:60px;"><img src="ri.jpeg" class="novimg1"><a href="ri_mainpage.html"
+                    class="top5">Reverend Insanity</a></div><br>
+            <div class="ranking" style="height:60px;"><img src="ccg.jpg" class="novimg1"><a href="ccg_mainpage.html"
+                    class="top5">Cultivation Chat Group</a></div><br>
+            <div class="ranking" style="height:60px;"><img src="sh.jpg" class="novimg1"><a href="sh_mainpage.html"
+                    class="top5">The Complete Sherlock Holmes</a></div>
+        </div>
+        <div class="main">
+            <div class="images1 images2">
+                <img src="sh.jpg" class="novimg2">
+                <h1>The Complete Sherlock Holmes</h1>
+                <h3>Chapter -</h3>
+                <select id="chapter" class="chapter">
+                    <option value="1" class="chapter">1</option>
+                </select>
+                <button onclick="chap_change()" class="sub_btn">Enter</button>
+                <p class="nov_details">
+                    Sir Arthur Conan Doyle's Sherlock Holmes series is a collection of four novels and 56 short stories
+                    featuring the brilliant detective Sherlock Holmes and his loyal friend Dr. John Watson. The novels,
+                    including "A Study in Scarlet," "The Sign of the Four," "The Hound of the Baskervilles," and "The
+                    Valley of Fear," showcase Holmes' deductive prowess as he unravels complex mysteries. The short
+                    stories, compiled in collections such as "The Adventures of Sherlock Holmes," "The Memoirs of
+                    Sherlock Holmes," "The Return of Sherlock Holmes," and "His Last Bow," span a range of intriguing
+                    cases. Set in Victorian and Edwardian London, these works highlight Holmes' keen observation skills,
+                    logical reasoning, and penchant for disguises, establishing him as one of the most iconic and
+                    enduring fictional detectives in literary history.
+                    <br>
+                    The Complete Sherlock Holmes consists of all of the 56 short stories and four novels written by Sir
+                    Arthur Conan Doyle.
+                </p>
+                <button onclick="chap_next()" class="sub_btn2">Next</button>
+                <button onclick="chap_previous()" class="sub_btn2">Previous</button>
+                <iframe id="nov_display" class="nov_display" src="SH_NOV/sh_ch_1.pdf"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function chap_change()
+        {
+            let chap_num = parseInt(document.getElementById("chapter").value);
+            let chap_name = "SH_NOV/sh_ch_";
+            let chap_content = chap_name + chap_num + ".pdf";
+            document.getElementById("nov_display").setAttribute("src", chap_content);
+        }
+        function chap_next() {
+            let chap_num = parseInt(document.getElementById("chapter").value) + 1;
+            document.getElementById("chapter").value = chap_num;
+            let chap_name = "SH_NOV/sh_ch_";
+            let chap_content = chap_name + chap_num + ".pdf";
+            document.getElementById("nov_display").setAttribute("src", chap_content);
+        }
+        function chap_previous() {
+            let chap_num = parseInt(document.getElementById("chapter").value) - 1;
+            document.getElementById("chapter").value = chap_num;
+            let chap_name = "SH_NOV/sh_ch_";
+            let chap_content = chap_name + chap_num + ".pdf";
+            document.getElementById("nov_display").setAttribute("src", chap_content);
+        }
+    </script>
+
+    <div class="footer">
+        <h2>Created by :-</h2>
+        <p>Nisarg Prajapati - CS14</p>
+        <p>Ved Patel - CS18</p>
+    </div>
+
+</body>
+
+</html>
